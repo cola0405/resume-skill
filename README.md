@@ -8,7 +8,7 @@
 
 ## 预览
 
-![](examples\example.png)
+![preview](examples/example.png)
 ## 快速开始
 
 ```bash
