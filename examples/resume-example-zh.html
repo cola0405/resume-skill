@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张明远 · 个人简历（A4单页版）</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+    :root {
+      --accent: #6366f1;
+      --text: #111216;
+      --text-2: #4b4f5c;
+      --text-3: #7a7f8f;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+      color: var(--text);
+      background: #f4f4f6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.12);
+      padding: 13mm 15mm 17mm;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+      body { background: white; margin: 0; padding: 0; }
+      .a4-page {
+        box-shadow: none; margin: 0; width: 100%; min-height: 100%;
+        padding: 12mm 14mm 14mm;
+      }
+      .no-print { display: none !important; }
+      .pill {
+        background: rgba(99, 102, 241, 0.13) !important;
+        border-color: rgba(99, 102, 241, 0.28) !important;
+        color: #4338ca !important;
+      }
+      .accent-line { background: #6366f1 !important; }
+      .bullet::before { color: #6366f1 !important; }
+    }
+
+    .a4-page { font-size: 13.2px; line-height: 1.45; }
+    .name { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .title { font-size: 17px; font-weight: 600; color: #222; margin-top: 2px; }
+
+    .section-title {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--text-3); font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 6px; padding-bottom: 3px; border-bottom: 1px solid #e5e5e8;
+    }
+
+    .accent-line { width: 48px; height: 3px; background: #6366f1; margin: 8px 0 10px; border-radius: 1px; }
+    .lede { font-size: 13.2px; line-height: 1.5; color: var(--text-2); }
+
+    .pill {
+      display: inline-block; padding: 3px 9px; font-size: 11.5px; font-weight: 500;
+      background: rgba(99, 102, 241, 0.09); color: #4f46e5;
+      border-radius: 9999px; border: 1px solid rgba(99, 102, 241, 0.18);
+      margin: 2px 4px 2px 0; white-space: nowrap;
+    }
+
+    .bullet {
+      position: relative; padding-left: 15px; margin-bottom: 3.5px;
+      font-size: 12.8px; line-height: 1.42;
+    }
+    .bullet::before {
+      content: "\2192"; position: absolute; left: 0;
+      color: #6366f1; font-weight: 700; font-size: 11px; opacity: 0.7;
+    }
+
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+    .company { font-size: 14.5px; font-weight: 700; }
+    .date { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--text-3); white-space: nowrap; }
+
+    .avatar {
+      width: 90px; height: 90px; border-radius: 16px;
+      object-fit: cover; border: 1px solid #e5e5e8;
+    }
+
+    .compact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 16px; }
+    .small-card {
+      background: #f8f8fa; border: 1px solid #eee; border-radius: 8px;
+      padding: 8px 11px; font-size: 12.3px;
+    }
+
+    .footer-note {
+      font-size: 9.5px; color: #999; text-align: center;
+      margin-top: 8px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="a4-page mx-auto">
+
+    <!-- 头部 -->
+    <div class="flex justify-between items-start mb-2">
+      <div>
+        <div class="text-[10px] tracking-[2px] text-[#8a8f9e] font-mono mb-1">SHENZHEN · CHINA</div>
+        <div class="name">张明远</div>
+        <div class="title">高级全栈工程师</div>
+      </div>
+      <!-- 头像占位：使用 CSS 生成的头像 -->
+      <div class="avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; font-weight: 700;">张</div>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="flex items-center gap-x-5 text-[12.5px] mt-1 mb-1 text-[#444]">
+      <div><i class="fa-solid fa-envelope mr-1.5 text-[#6366f1]"></i>zhangmy@example.com</div>
+      <div>深圳 · 全栈开发 / 技术负责人</div>
+    </div>
+
+    <div class="accent-line"></div>
+
+    <!-- 关于我 -->
+    <div class="mb-3.5">
+      <div class="section-title">关于我</div>
+      <p class="lede">
+        8 年全栈开发经验，专注于高并发 Web 应用与企业级 SaaS 产品架构设计。曾主导多个日活百万级产品的技术选型与落地，擅长从 0 到 1 搭建团队技术体系。对前端工程化、微服务架构和 DevOps 实践有深入理解。
+      </p>
+    </div>
+
+    <!-- 核心能力 -->
+    <div class="mb-3.5">
+      <div class="section-title">核心能力</div>
+      <div>
+        <span class="pill">React / Next.js</span>
+        <span class="pill">Node.js</span>
+        <span class="pill">TypeScript</span>
+        <span class="pill">Go</span>
+        <span class="pill">PostgreSQL</span>
+        <span class="pill">Docker / K8s</span>
+        <span class="pill">微服务架构</span>
+        <span class="pill">CI/CD</span>
+      </div>
+    </div>
+
+    <!-- 工作经历 -->
+    <div class="mb-3.5">
+      <div class="section-title">工作经历</div>
+
+      <div class="mb-2.5">
+        <div class="job-header">
+          <span class="company">星辰科技 · 平台架构部</span>
+          <span class="date">2021 年 — 至今</span>
+        </div>
+        <div class="text-[11.5px] text-[#7a7f8f] mb-1">高级全栈工程师 / 技术负责人</div>
+        <div class="bullet">主导 SaaS 协作平台从单体架构迁移至微服务，系统吞吐量提升 3 倍，P99 延迟降低 60%</div>
+        <div class="bullet">搭建前端 Monorepo 工程体系，统一 5 条产品线的组件库与构建流程，开发效率提升 40%</div>
+        <div class="bullet">设计并落地灰度发布与 A/B 实验平台，支撑产品快速迭代，月均上线 30+ 功能实验</div>
+        <div class="bullet">带领 8 人技术团队，建立 Code Review 机制与技术分享文化，团队留存率 95%</div>
+      </div>
+
+      <div>
+        <div class="job-header">
+          <span class="company">云帆数据</span>
+          <span class="date">2018 年 — 2021 年</span>
+        </div>
+        <div class="bullet">负责数据可视化大屏产品的前端架构，支持 200+ 数据组件的拖拽式编排</div>
+        <div class="bullet">开发实时数据推送服务（WebSocket），支撑 10 万级并发连接的数据看板</div>
+      </div>
+    </div>
+
+    <!-- 项目与成果 -->
+    <div class="mb-3">
+      <div class="section-title">项目与成果</div>
+      <div class="compact-grid">
+        <div class="small-card">
+          <div class="font-semibold mb-0.5">FlowSpace 协作平台</div>
+          <div class="text-[12px] text-[#444]">企业级在线协作工具，支持文档/表格/看板，服务 5000+ 企业客户，年营收 2000 万</div>
+        </div>
+        <div class="small-card">
+          <div class="font-semibold mb-0.5">DataLens 可视化引擎</div>
+          <div class="text-[12px] text-[#444]">自研可视化渲染引擎，支持 ECharts/D3 无缝切换，性能较开源方案提升 5 倍</div>
+        </div>
+        <div class="small-card">
+          <div class="font-semibold mb-0.5">DevPilot CI/CD 平台</div>
+          <div class="text-[12px] text-[#444]">内部 DevOps 平台，集成构建/测试/部署全流程，日均处理 2000+ 构建任务</div>
+        </div>
+        <div class="small-card">
+          <div class="font-semibold mb-0.5">开源贡献</div>
+          <div class="text-[12px] text-[#444]">活跃开源贡献者，GitHub 1200+ Star，维护 3 个 npm 周下载量 5k+ 的工具库</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 其他亮点 -->
+    <div class="mb-3">
+      <div class="section-title">其他亮点</div>
+      <div class="bullet">技术博客作者，累计发表 60+ 篇深度文章，全网阅读量 100 万+</div>
+      <div class="bullet">QCon / GMTC 技术大会讲师，分享前端工程化与微服务实践</div>
+      <div class="bullet">英语流利（CET-6 590），可全英文工作环境无障碍沟通</div>
+    </div>
+
+    <!-- 教育 + 认证 -->
+    <div class="mb-2">
+      <div class="section-title">教育背景与专业认证</div>
+      <div class="flex items-center justify-between text-[13px]">
+        <div>
+          <span class="font-semibold">华中科技大学</span>
+          <span class="text-[#555]"> · 计算机科学与技术 · 本科（2014—2018）</span>
+        </div>
+        <div class="flex gap-2 flex-wrap justify-end">
+          <span class="pill">AWS SAA 认证</span>
+          <span class="pill">校级优秀毕业生</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note no-print">
+      示例简历 · 使用 resume-skill 模板生成
+    </div>
+
+  </div>
+
+</body>
+</html>
